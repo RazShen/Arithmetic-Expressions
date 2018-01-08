@@ -1,0 +1,22 @@
+I'll descride the simplifications by classes:
+
+1) Plus- a) Two expressions of Plus that are equal (for instance (x+y) + (y+x) results 2*(x+y)).
+	 First I checked if these two expressions are equal (by swipping values if they are commutative) and than return
+	 a 2 * one of the expressions.
+	
+	 b) Two expressions of mult that contain the same variable with a number (for instance 5*x + 9*x result 14*x_.
+	 First I checked if the variables are equal in both expressions, and than return the sum of the num * one of the var expressions.
+
+2) Neg- a) A neg inside a neg- returns the expression inside the first neg (for instance -(-(x)) = returns x).
+	I checked if the expression inside the neg is neg- if it is return the expression inside the nested neg.
+
+3) Minus- a) If two expressions are equal (for instance (y+x) - (y+x) results 0).
+	  First I checked i checked if they are equal (by swipping values if they are commutative), if they are: return 0.
+
+4) Mult- a) If two expressions are equal (for instance (x+y) * (y+x) results (x+y)^2)
+	 First I checked if the expressions inside the mult are equal (by swipping values if they are commutative),
+	 if they are equal- return new power of one of the expressions with power 2.
+
+5) Pow- a) A power within a power (for instance (x^y)^z returns (x^(y*z))).
+	First I checked if the expressions inside the power is power- if it is, return a new power of the expression
+	inside the nested pow with the power ofmultiply of it's power with the original power. 
